@@ -1846,7 +1846,7 @@ function tribune_post_form($form_id, $node, $tribune_id) {
     '#type'           => 'textfield',
     '#maxlength'      => $node->tribune_settings['max_message_size'],
     '#id'             => 'tribune-'. $tribune_id .'-palmipede',
-    '#attributes'     => array('class' => 'tribune-palmipede'),
+    '#attributes'     => array('class' => 'tribune-palmipede', 'autocomplete' => 'off') /* mc: added autocomplete="off" -- fixes FireFox to stop suggestion for this entry */
   );
 
   global $user;
